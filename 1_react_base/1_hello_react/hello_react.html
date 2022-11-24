@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            color: #f40;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+        let myId = 'domId';
+        let title = 'hello react';
+        const VDOM = (
+            <div className="title">
+                <h2 id={myId}>
+                    <span>{title}</span>
+                </h2>
+                <div>hello react2</div>
+            </div>
+        )
+        ReactDOM.render(VDOM, document.getElementById('test'));
+    </script>
+</body>
+
+</html>
